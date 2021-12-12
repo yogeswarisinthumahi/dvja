@@ -16,7 +16,7 @@ phases:
     - echo Hello
  # artifacts:
   #  files:
-    - '**/*'
+    # - '**/*'
   # - target/bike-service-0.0.1-SNAPSHOT.war
   # - scripts/*
   
