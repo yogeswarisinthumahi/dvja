@@ -23,15 +23,15 @@ steps:
 
 
 
-- task: dependency-check-build-task@6
-  inputs:
-    projectName: 'dvja-DC'
-    scanPath: '**/*.war'
-    format: 'HTML'
-
-#- task: SnykSecurityScan@1
+#- task: dependency-check-build-task@6
 #  inputs:
-#    serviceConnectionEndpoint: 'devsecopsdemo'
-#    testType: 'app'
-#    monitorWhen: 'always'
-#    failOnIssues: true
+#    projectName: 'dvja-DC'
+#    scanPath: '**/*.war'
+#    format: 'HTML'
+
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'devsecopsdemo'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
