@@ -13,7 +13,7 @@ jobs:
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        args: --severity-threshold=high --fail-on=upgradable
+        args: --severity-threshold=high --fail-on=upgradable --file=Dockerfile
     - name: Upload Container Scan results to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v1
       with:
